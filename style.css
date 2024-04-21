@@ -14,6 +14,10 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.1);
+  background-image: url(assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 button {
@@ -21,39 +25,57 @@ button {
 }
 
 .container_cadastro {
-  width: 90%;
-  height: 80%;
-  background: white;
+  width: 70%;
+  height: 70%;
+  background: #bbbbbb;
+  box-shadow: 0 0 3px rgb(175, 175, 175);
+  border-radius: 15px;
 }
 
 .header_cadastro {
     min-height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    gap: 20px;
+    flex-direction: column;
     width: 100%; 
-    padding: 0 12px; 
+    padding: 0 1px; 
   }
-  
-  .header_cadastro span {
-    font-weight: 300;
-    font-size: 20px;
-    word-break: break-all;
-  }
-  
-  #new {
-    font-size: 16px;
-    padding: 8px;
+
+  .header_cadastro .squaretopo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 80px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #707070;
     border: none;
+  }
+  
+  .header_cadastro .squaretopo span {
+    font-weight: 300;
+    font-size: 30px;
+    word-break: break-all;
     color: white;
-    background-color: black;
+  }
+  
+  #adicionar {
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 12%;
+    height: 40px;
+    border-radius: 15px;
+    color: white;
+    background-color: #707070;
+    border: none;
   }
   
 .divTable {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
   width: auto; 
-  height:inherit; 
-  overflow:auto;
 }
 
 .divTable::-webkit-scrollbar {
@@ -62,44 +84,119 @@ button {
 }
 
 .divTable::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: darkgray; 
 }
 
-table {
-    width: 100%;
+  /* ESTILO DA TABELA */
+  table {
+    width: 90%;
+    margin-left: 10px;
     border-spacing: 10px;
     word-break: break-all;
     border-collapse: collapse;
   }
-  
-  thead {
-    background-color: whitesmoke;
+
+  table tbody{
+    margin-left: 100px;
   }
+  
+  /* ESTILO DAS LINHAS */
+
+  thead {
+    background-color: #707070;
+    height: 45px;
+  }
+
+    /* ESTILO DAS LINHAS */
   
   tbody tr td {
-    vertical-align: text-top;
-    padding: 6px;
+    text-align: start;
+    padding: 10px 0 0 37px;
     max-width: 50px;
   }
-  
+
   thead tr th {
-      padding: 5px;
-      text-align: start;
-      margin-bottom: 50px;
-    }
-  
-  tbody tr {
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 450;
+    text-align: start;
+    padding-left: 30px;
     margin-bottom: 50px;
+    color: white;
   }
-  
-  thead tr th.acao {
-    width: 100px!important;
-    text-align: center;
+
+  thead tr th:nth-child(2) {
+
+    border-radius: 0;
+  }
+
+  thead tr th:first-child {
+    border-top-right-radius: 0; border-bottom-right-radius: 0;
+    }
+
+  thead tr th:nth-child(3) {
+    border-radius: 0;
+    }
+
+  thead tr th:nth-child(4){
+   border-radius: 0;
+    }
+
+  thead tr th:last-child{
+    border-top-left-radius: 0; border-bottom-left-radius: 0;
+    }
+
+  .divTable .botao {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .square1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 15px;
+    background-color: blue;
+    border: none;
+  }
+
+  .square1 #editar {
+    width: 70%;
+    height: 70%;
+  }
+
+  .square2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 15px;
+    background-color: red;
+    border: none;
+  }
+
+  .square2 #editar {
+    width: 70%;
+    height: 70%;
+  }
+
+  thead tr th.imagem:last-child {
+    width: 5%;
+    border-radius: 10px;
+    background-color: red;
   }
   
   tbody tr td.acao {
-    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
   @media (max-width: 700px) {
@@ -155,13 +252,14 @@ table {
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    background-color: white;
+    background-color: #747474;
     border-radius: 10px;
     width: 50%;
   }
   
   .modal label {
-    font-size: 14px;
+    font-size: 16px;
+    color: white;
     width: 100%;
   }
   
@@ -183,9 +281,10 @@ table {
     justify-content: center;
     outline: none;
     padding: 5px 10px; 
-    width: 20%;
+    width: 30%;
     border: none;
-    background-color: black;
+    background-color: #353535;
+    border-radius: 15px;
     color: white;
     font-size: 20px;
   }
@@ -221,4 +320,12 @@ table {
   
   td button i:first-child {
     margin-right: 10px;
+  }
+  
+  tbody {
+    color: white;
+  }
+
+  bx bx-edit {
+    color: white;
   }

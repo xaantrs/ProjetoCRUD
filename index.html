@@ -14,19 +14,29 @@
   <div class="container_cadastro">
     
     <div class="header_cadastro">
+      <div class="squaretopo">
       <span>Cadastro de Produtos</span>
-      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+      <button onclick="openModal()" id="adicionar">Adicionar</i></button>
     </div>
 
     <div class="divTable">
       <table>
         <thead>
           <tr>
+            <th class="acao">
+              <div class="square1">
+                <img src="assets/icon-editar.png" id="editar" alt="">
+              </div>
+            </th>
+            <th class="acao">
+              <div class="square2">
+                <img src="assets/icon-lixeria.png" id="editar" alt="">
+              </div>
+            </th>
             <th>Nome do Produto</th>
             <th>Fornecedor</th>
-            <th>Preço</th>
-            <th class="acao">Editar</th>
-            <th class="acao">Excluir</th>
+            <th>Valor</th>
           </tr>
         </thead>
         <tbody>
@@ -43,7 +53,7 @@
           <label for="m-fornecedor">Fornecedor</label>
           <input id="m-fornecedor" type="text" required />
   
-          <label for="m-preco">Preço</label>
+          <label for="m-preco">Valor</label>
           <input id="m-preco" type="number" required />
           <button id="btnSalvar">Salvar</button>
         </form>
